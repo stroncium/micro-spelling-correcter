@@ -4,6 +4,8 @@ Simple breadth-first early terminating Levenshtein distance auto correcter for s
 
 Finds first suiting correction for word if there is one with distance less or equal than target maximum distance and returns it, otherwise returns `undefined`.
 
+Additionally, applies a simple heuristic of limiting max distance to half input length rounded down but not lessser than one, which helps to escape corrections which feel weird in real life(like 'a' => 'is', 'foo' => 'log' with distance 2).
+
 Details:
  - Cost of every edit is counted as 1, though for every analyzed distance search tries skips then replacements then transpositions then additions.
  - Checks if word is in target word set at start and just returns the word if it is(so you don't need to check it yourself).

@@ -38,6 +38,10 @@ class MicroSpellingCorrecter {
 			distance = this.defaultDistance;
 		}
 
+		if ((input.length >> 1) < distance) {
+			distance = (input.length === 1) ? 1 : (input.length >> 1);
+		}
+
 		return this.findCorrection(input, distance);
 	}
 
