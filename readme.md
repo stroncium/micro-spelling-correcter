@@ -14,7 +14,7 @@ Details:
 
 `npm install micro-spelling-correcter`
 
-```
+```js
 const MicroSpellingCorrecter = require('micro-spelling-correcter');
 
 let correcter = new MicroSpellingCorrecter(
