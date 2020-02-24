@@ -1,4 +1,4 @@
-# micro-spelling-correcter
+# micro-spelling-correcter [![Build Status](https://travis-ci.com/stroncium/nodejs-procfs.svg?branch=master)](https://travis-ci.com/stroncium/nodejs-procfs) [![codecov](https://codecov.io/gh/stroncium/micro-spelling-correcter/branch/master/graph/badge.svg)](https://codecov.io/gh/stroncium/micro-spelling-correcter)
 
 Simple breadth-first early terminating Levenshtein distance auto correcter for small sets of possible resulting strings.
 
