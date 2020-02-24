@@ -33,11 +33,15 @@ class MicroSpellingCorrecter {
 		return edits;
 	}
 
-	correct(word, distance) {
+	correct(input, distance) {
 		if (distance === undefined) {
 			distance = this.defaultDistance;
 		}
 
+		return this.findCorrection(input, distance);
+	}
+
+	findCorrection(word, distance) {
 		const {words} = this;
 
 		if (words.has(word)) {
@@ -55,7 +59,7 @@ class MicroSpellingCorrecter {
 
 			if (distance > 1) {
 				for (const edit of edits) {
-					const correction = this.correct(edit, distance - 1);
+					const correction = this.findCorrection(edit, distance - 1);
 					if (correction !== undefined) {
 						return correction;
 					}

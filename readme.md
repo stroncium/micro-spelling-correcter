@@ -4,7 +4,9 @@ Simple breadth-first early terminating Levenshtein distance auto correcter for s
 
 Finds first suiting correction for word if there is one with distance less or equal than target maximum distance and returns it, otherwise returns `undefined`.
 
-Cost of every edit is counted as 1, though for every analyzed distance search tries skips then replacements then transpositions then additions.
+Details:
+ - Cost of every edit is counted as 1, though for every analyzed distance search tries skips then replacements then transpositions then additions.
+ - Checks if word is in target word set at start and just returns the word if it is(so you don't need to check it yourself).
 
 ## Example
 
@@ -22,7 +24,7 @@ let correcter = new MicroSpellingCorrecter(
 	1 // target maximum distance, defaults to 2
 );
 
-correcter.correct('word'); // 'word', will just check(and find) if word is set of target words and return right away
+correcter.correct('word'); // 'word', fast path
 correcter.correct('wurd'); // 'word'
 correcter.correct('simple'); // 'sample'
 correcter.correct('mutalisk'); // undefined
