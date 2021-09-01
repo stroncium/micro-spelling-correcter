@@ -7,6 +7,10 @@
     "test": "nyc ava && xo",
     "coverage": "codecov"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stroncium/micro-spelling-correcter.git"
+  },
   "keywords": [
     "suggestion",
     "correction",
